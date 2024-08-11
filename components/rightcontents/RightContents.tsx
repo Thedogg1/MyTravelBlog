@@ -1,7 +1,19 @@
 import React from 'react';
+import TravelCard from './TravelCard';
+import InstaCard from './InstaCard';
+import Recommended from './Recommended';
 
-const RightContents = () => {
-  return <div className='bg-green-500 h-[200px]'>RightContents</div>;
+type Props = {
+  posts: Post[];
+};
+const RightContents = ({ posts }: Props) => {
+  return (
+    <div className='-mt-12 z-10'>
+      <TravelCard />
+      <InstaCard />
+      <Recommended posts={posts} />
+    </div>
+  );
 };
 
 export default RightContents;
