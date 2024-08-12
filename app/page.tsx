@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Main from '@/components/Main';
+import FooterMobile from '@/components/FooterMobile';
 
 const query = groq`
 *[_type =="post"]{
@@ -24,7 +25,12 @@ const page = async () => {
       <Hero />
 
       <Main posts={posts} />
-      <Footer />
+      <div className='hidden md:block'>
+        <Footer />
+      </div>
+      <div className='md:hidden'>
+        <FooterMobile />
+      </div>
     </div>
   );
 };
