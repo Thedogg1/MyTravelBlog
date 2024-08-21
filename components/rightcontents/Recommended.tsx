@@ -19,9 +19,9 @@ const Recommended = ({ posts }: Props) => {
       </div>
       <div>
         {posts.slice(0, 3).map((post) => (
-          <Route route='/blog/post1'>
+          <Route route={`/blog/${post.slug.current}`}>
             <div
-              key={post.id}
+              key={post._id}
               className='flex border h-32 border-gray-200 rounded-lg mb-3'
             >
               <div className='relative w-32 h-32 drop-shadow-xl basis-[40%]'>

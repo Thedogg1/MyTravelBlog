@@ -50,28 +50,31 @@ const FooterMobile = () => {
                   />
                   <path
                     d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428
-                       0-  .845-.138-1.187-.395L0 2.6V14a2 
+                       0-.845-.138-1.187-.395L0 2.6V14a2 
                        2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'
                   />
                 </svg>
               </div>
-              <input
-                type='text'
-                id='input-group-1'
-                className='bg-transparent border border-gray-300
+              <label>
+                <input
+                  type='text'
+                  id='input-group-2'
+                  className='bg-transparent border border-gray-300
                     text-gray-50  text-sm rounded-lg block w-full ps-10 p-2.5'
-                placeholder='zgbo@gmail.com'
-              />
-
-              <button
-                type='submit'
-                className='text-black
+                  placeholder='zgbo@gmail.com'
+                />
+              </label>
+              <label>
+                <button
+                  type='submit'
+                  className='text-black
                  bg-gray-50 hover:bg-gray-100 focus:ring-1 
                   focus:outline-none focus:ring-gray-100 font-medium rounded-md 
                   text-sm sm:w-auto px-5  py-1 text-center h-10 ml-2'
-              >
-                Submit
-              </button>
+                >
+                  Submit
+                </button>
+              </label>
             </div>
           </div>
           <div className='py-5'>

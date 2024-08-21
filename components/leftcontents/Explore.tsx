@@ -52,9 +52,11 @@ const Explore = () => {
           <p className='text-[#E7493F] text-[10px]'>
             {country.readers + ' READERS'}
           </p>
-          <button className='w-24 md:w-32 text-[10px] bg-transparent text-white py-2 px-4 border border-[#fff]'>
-            EXPLORE NOW
-          </button>
+          <label>
+            <button className='w-24 md:w-32 text-[10px] bg-transparent text-white py-2 px-4 border border-[#fff]'>
+              EXPLORE NOW
+            </button>
+          </label>
         </div>
       ))}
     </div>

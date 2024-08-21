@@ -9,17 +9,18 @@ type Props = {
 
 const Featured = ({ posts }: Props) => {
   const filteredPost = posts.filter(
-    (post: { title: string }) => post.title === 'dummy3'
+    (post: { title: string }) =>
+      post.title === 'A Journey To Paradise:  The Maldives Travel Guide'
   );
 
   return (
     <div className='md:flex md:flex-row mx-auto'>
       <div className='md:mx-6 lg:mx-14 mb-5'>
         {filteredPost.map((post, i) => (
-          <Route route='/blog/post1'>
+          <Route route={`/blog/${post.slug.current}`}>
             <div
-              className='border border-gray-600 rounded mb-3 md:basis-[40%]'
-              key={post.id}
+              className='border border-gray-600 rounded mb-3 md:basis-[10%]'
+              key={post._id}
             >
               <div className='relative w-full h-80'>
                 <Image
@@ -29,11 +30,11 @@ const Featured = ({ posts }: Props) => {
                   className='object-cover object-left lg:object-center'
                 />
               </div>
-              <div className='mx-5 pb-4'>
+              <div className='mx-5 pb-4' key={post.title}>
                 <h2 className='mt-5 mb-2 font-semibold text-[#dc2626]'>
                   {post.title}
                 </h2>
-                <p className='line-clamp-6'>{post.description}</p>
+                <p className='line-clamp-6 w-80'>{post.description}</p>
               </div>
             </div>
           </Route>

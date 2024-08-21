@@ -8,11 +8,7 @@ const Route = ({
   children: React.ReactNode;
   route: string;
 }) => {
-  return (
-    <Link key={route} href={route}>
-      {children}
-    </Link>
-  );
+  return <Link href={route}>{children}</Link>;
 };
 
 export default Route;
