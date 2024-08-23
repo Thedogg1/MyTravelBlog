@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 type Input = {
   _id: string;
@@ -28,10 +29,13 @@ const Comments = ({ post }: Props) => {
       body: JSON.stringify(data),
     })
       .then(() => {
-        console.log(data);
+        toast.success(
+          'Your comment has been submitted and is awaiting approval'
+        );
       })
-      .catch((err: any) => {
-        console.log(err);
+      .catch((error: any) => {
+        toast.error(error.message);
+        return;
       });
   };
 
