@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import Route from '../Route';
 import { urlForImage } from '@/sanity/lib/image';

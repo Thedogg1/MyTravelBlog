@@ -10,6 +10,7 @@ const InstaCard = () => {
             <img
               className='h-8 w-8 rounded-full'
               src='https://picsum.photos/id/1027/150/150'
+              alt='nice picture'
             />
             <div className='ml-3 '>
               <span className='text-sm font-semibold antialiased block leading-tight text-white'>
